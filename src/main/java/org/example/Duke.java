@@ -68,13 +68,13 @@ public class Duke extends Application {
         AnchorPane.setBottomAnchor(userInput, 1.0);
 
         // Add functionality to handle user input.
-        sendButton.setOnMouseClicked((event) -> {
+        /*sendButton.setOnMouseClicked((event) -> {
            handleUserInput();
         });
 
         userInput.setOnAction((event) -> {
            handleUserInput();
-        });
+        });*/
 
         dialogueContainer.heightProperty().addListener((observable) -> {
             scrollPane.setVvalue(1.0);
@@ -86,7 +86,7 @@ public class Duke extends Application {
         return textToAdd;
     }
 
-    private void handleUserInput() {
+    /*private void handleUserInput() {
         Label userText = new Label(userInput.getText());
         Label dukeText = new Label(getResponse(userInput.getText()));
         dialogueContainer.getChildren().addAll(
@@ -94,9 +94,9 @@ public class Duke extends Application {
                 DialogBox.getDukeDialog(dukeText, new ImageView(duke))
         );
         userInput.clear();
-    }
+    }*/
 
-    private String getResponse(String input) {
+    public String getResponse(String input) {
         return "Duke heard: " + input;
     }
 }
